@@ -18,7 +18,7 @@ const { title, description = "A curated collection of AI skills for Growth Engin
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <Font cssVariable="--font-commit-mono" />
+    <Font cssVariable="--font-commit-mono" preload />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title ? `${title} | Growth Skills` : "Growth Skills"}</title>
   </head>
