@@ -1,0 +1,14 @@
+{
+  "slug": "conversion-psychology",
+  "user": "mike-coulbourn",
+  "repo": "claude-vibes",
+  "rawUrl": "https://raw.githubusercontent.com/mike-coulbourn/claude-vibes/main/plugins/vibes/skills/conversion-psychology/SKILL.md",
+  "githubUrl": "https://github.com/mike-coulbourn/claude-vibes/tree/main/plugins/vibes/skills/conversion-psychology",
+  "name": "conversion-psychology",
+  "topics": [
+    "Conversion Optimization",
+    "Copywriting"
+  ],
+  "description": "Psychology of conversion including emotional triggers, social proof, scarcity, urgency, and cognitive biases.",
+  "featured": false
+}

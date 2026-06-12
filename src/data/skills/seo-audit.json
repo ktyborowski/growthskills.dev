@@ -1,0 +1,14 @@
+{
+  "slug": "seo-audit",
+  "user": "coreyhaines31",
+  "repo": "marketingskills",
+  "rawUrl": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/seo-audit/SKILL.md",
+  "githubUrl": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit",
+  "name": "seo-audit",
+  "topics": [
+    "SEO",
+    "Analytics"
+  ],
+  "description": "Comprehensive SEO auditing framework covering crawlability, indexation, speed, on-page, and structured data.",
+  "featured": false
+}

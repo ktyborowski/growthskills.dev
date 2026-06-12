@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SkillsSearch from '../../components/SkillsSearch';
+
+const skills = await getCollection('skills');
+const skillsData = skills.map((skill) => ({
+  slug: skill.data.slug,
+  description: skill.data.description,
+  author: skill.data.user,
+  topics: skill.data.topics,
+}));
+---
+
+<Layout title="Skills" description="Browse and discover AI skills for growth engineers. Find tools to automate your workflows, boost productivity, and scale your marketing efforts.">
+  <h1>Skills</h1>
+  <p>Browse and discover AI skills for growth engineers. Find tools to automate your workflows, boost productivity, and scale your marketing efforts.</p>
+  <SkillsSearch skills={skillsData} client:load />
+</Layout>
+
+<style>
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.search-input) {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid oklch(92% 0.004 286.32);
+    background: white;
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.skills-grid) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  :global(.skill-card) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1px solid oklch(92% 0.004 286.32);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  :global(.skill-card:hover) {
+    background: oklch(97% 0.004 286.32);
+  }
+
+  :global(.skill-card strong) {
+    font-size: 1.1rem;
+  }
+
+  :global(.skill-card p) {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 640px) {
+    :global(.skills-grid) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

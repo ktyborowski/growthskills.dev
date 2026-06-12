@@ -1,0 +1,15 @@
+{
+  "slug": "gtm-product-led-growth",
+  "user": "github",
+  "repo": "awesome-copilot",
+  "rawUrl": "https://raw.githubusercontent.com/github/awesome-copilot/main/skills/gtm-product-led-growth/SKILL.md",
+  "githubUrl": "https://github.com/github/awesome-copilot/tree/main/skills/gtm-product-led-growth",
+  "name": "gtm-product-led-growth",
+  "topics": [
+    "Product-Led Growth",
+    "Growth Strategy",
+    "Onboarding"
+  ],
+  "description": "Build self-serve acquisition and expansion motions for PLG, including activation and monetization.",
+  "featured": false
+}

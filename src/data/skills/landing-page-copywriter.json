@@ -1,0 +1,15 @@
+{
+  "slug": "landing-page-copywriter",
+  "user": "onewave-ai",
+  "repo": "claude-skills",
+  "rawUrl": "https://raw.githubusercontent.com/onewave-ai/claude-skills/main/landing-page-copywriter/SKILL.md",
+  "githubUrl": "https://github.com/onewave-ai/claude-skills/tree/main/landing-page-copywriter",
+  "name": "landing-page-copywriter",
+  "topics": [
+    "Landing Pages",
+    "Copywriting",
+    "Conversion Optimization"
+  ],
+  "description": "Write high-converting landing page copy with proven frameworks for headlines, CTAs, social proof, and benefit-driven messaging.",
+  "featured": true
+}

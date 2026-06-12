@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const topics = await getCollection('topics');
+  const skills = await getCollection('skills');
+
+  return topics.map((topic) => ({
+    params: { topic: topic.data.slug },
+    props: {
+      topic: topic.data,
+      skills: skills.filter((skill) => skill.data.topics.includes(topic.data.label)),
+    },
+  }));
+}
+
+const { topic, skills } = Astro.props;
+---
+
+<Layout title={topic.label} description={`Browse ${topic.label} AI skills for Growth Engineers. Install and use curated skills to automate your workflows.`}>
+  <h1>{topic.label}</h1>
+  <p>{topic.description}</p>
+  <div class="skills-grid">
+    {skills.map((skill) => (
+      <a href={`/skills/${skill.data.slug}`} class="skill-card">
+        <strong>{skill.data.slug}</strong>
+        <em>by {skill.data.user}</em>
+        <p>{skill.data.description}</p>
+      </a>
+    ))}
+  </div>
+  <p><a href="/topics">&larr; Back to topics</a></p>
+</Layout>
+
+<style>
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1px solid oklch(92% 0.004 286.32);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .skill-card:hover {
+    background: oklch(97% 0.004 286.32);
+  }
+
+  .skill-card strong {
+    font-size: 1.1rem;
+  }
+
+  .skill-card p {
+    opacity: 0.8;
+  }
+</style>

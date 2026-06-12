@@ -1,0 +1,14 @@
+{
+  "slug": "frontend-design",
+  "user": "anthropics",
+  "repo": "claude-code",
+  "rawUrl": "https://raw.githubusercontent.com/anthropics/claude-code/main/plugins/frontend-design/skills/frontend-design/SKILL.md",
+  "githubUrl": "https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md",
+  "name": "frontend-design",
+  "topics": [
+    "Design",
+    "Landing Pages"
+  ],
+  "description": "Guidelines for creating distinctive, production-grade frontend interfaces that avoid generic AI aesthetics.",
+  "featured": false
+}

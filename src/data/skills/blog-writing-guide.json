@@ -1,0 +1,15 @@
+{
+  "slug": "blog-writing-guide",
+  "user": "getsentry",
+  "repo": "skills",
+  "rawUrl": "https://raw.githubusercontent.com/getsentry/skills/main/skills/blog-writing-guide/SKILL.md",
+  "githubUrl": "https://github.com/getsentry/skills/blob/main/skills/blog-writing-guide/SKILL.md",
+  "name": "blog-writing-guide",
+  "topics": [
+    "Content Marketing",
+    "Copywriting",
+    "SEO"
+  ],
+  "description": "Guide for writing, reviewing, and improving blog posts for engineering blogs and developer audiences.",
+  "featured": false
+}

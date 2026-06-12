@@ -9,9 +9,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "astro build && rclone sync ./dist growthskills:www --progress"
   },
   "dependencies": {
-    "astro": "^6.4.4"
+    "@astrojs/preact": "^5.1.5",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.4",
+    "fuse.js": "^7.4.2",
+    "isomorphic-dompurify": "^3.16.0",
+    "marked": "^18.0.5",
+    "preact": "^10.29.2"
   }
 }

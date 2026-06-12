@@ -1,0 +1,14 @@
+{
+  "slug": "brainstorm-experiments-new",
+  "user": "phuryn",
+  "repo": "pm-skills",
+  "rawUrl": "https://raw.githubusercontent.com/phuryn/pm-skills/main/pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md",
+  "githubUrl": "https://github.com/phuryn/pm-skills/tree/main/pm-product-discovery/skills/brainstorm-experiments-new",
+  "name": "brainstorm-experiments-new",
+  "topics": [
+    "A/B Testing",
+    "Growth Strategy"
+  ],
+  "description": "Design lean startup experiments (pretotypes) for a new product with XYZ hypothesis framework.",
+  "featured": false
+}

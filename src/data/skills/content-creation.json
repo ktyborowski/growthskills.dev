@@ -1,0 +1,15 @@
+{
+  "slug": "content-creation",
+  "user": "anthropics",
+  "repo": "knowledge-work-plugins",
+  "rawUrl": "https://raw.githubusercontent.com/anthropics/knowledge-work-plugins/main/marketing/skills/content-creation/SKILL.md",
+  "githubUrl": "https://github.com/anthropics/knowledge-work-plugins/blob/main/marketing/skills/content-creation/SKILL.md",
+  "name": "content-creation",
+  "topics": [
+    "Content Marketing",
+    "Copywriting",
+    "Social Media"
+  ],
+  "description": "Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies.",
+  "featured": false
+}

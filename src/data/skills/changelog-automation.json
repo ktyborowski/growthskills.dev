@@ -1,0 +1,14 @@
+{
+  "slug": "changelog-automation",
+  "user": "wshobson",
+  "repo": "agents",
+  "rawUrl": "https://raw.githubusercontent.com/wshobson/agents/main/plugins/documentation-generation/skills/changelog-automation/SKILL.md",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/documentation-generation/skills/changelog-automation",
+  "name": "changelog-automation",
+  "topics": [
+    "Marketing Automation",
+    "Content Marketing"
+  ],
+  "description": "Automate changelog generation from commits, PRs, and releases following Keep a Changelog format.",
+  "featured": false
+}

@@ -1,0 +1,194 @@
+---
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import DOMPurify from 'isomorphic-dompurify';
+import Layout from '../../layouts/Layout.astro';
+import InstallCommand from '../../components/InstallCommand.astro';
+import CopyButton from '../../components/CopyButton';
+
+export async function getStaticPaths() {
+  const skills = await getCollection('skills');
+  return skills.map((skill) => ({
+    params: { slug: skill.data.slug },
+    props: { skill },
+  }));
+}
+
+const { skill } = Astro.props;
+
+const repoUrl = `https://github.com/${skill.data.user}/${skill.data.repo}`;
+
+const title = skill.data.name
+  .split('-')
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ');
+
+let rawMarkdown = '';
+let renderedContent = '';
+try {
+  const response = await fetch(skill.data.rawUrl);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch skill content: ${response.status} ${response.statusText}`);
+  }
+  rawMarkdown = await response.text();
+
+  let frontmatter = '';
+  let body = rawMarkdown;
+  const fmMatch = rawMarkdown.match(/^---\n([\s\S]*?)\n---\n?/);
+  if (fmMatch) {
+    frontmatter = `<pre class="frontmatter"><code>---\n${fmMatch[1]}\n---</code></pre>`;
+    body = rawMarkdown.slice(fmMatch[0].length);
+  }
+
+  renderedContent = frontmatter + DOMPurify.sanitize(await marked.parse(body));
+} catch (e) {
+  throw new Error(`Failed to load skill "${skill.data.slug}": ${e instanceof Error ? e.message : String(e)}`);
+}
+---
+
+<Layout title={title} description={skill.data.description}>
+  <h1>{title}</h1>
+  <p class="author"><em>by <a href={`https://github.com/${skill.data.user}`} target="_blank" rel="noopener noreferrer">{skill.data.user}</a></em></p>
+  <p class="description">{skill.data.description}</p>
+
+  <p>
+    <a href={skill.data.githubUrl} target="_blank" rel="noopener noreferrer">
+      View on GitHub
+    </a>
+  </p>
+
+  <h2>Install</h2>
+  <div class="install-card">
+    <InstallCommand repoUrl={repoUrl} skillName={skill.data.name} />
+  </div>
+
+  <div class="card-wrapper">
+    <div class="card-copy">
+      <CopyButton text={rawMarkdown} ariaLabel="Copy raw markdown" client:load />
+    </div>
+    <article class="card" set:html={renderedContent} />
+  </div>
+
+  <p><a href="/skills">&larr; Back to all skills</a></p>
+</Layout>
+
+<style>
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .author {
+    margin-top: 0.25rem;
+  }
+
+  .description {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+
+  .install-card {
+    background: white;
+    border: 1px solid oklch(92% 0.004 286.32);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  .card-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .card-copy {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1;
+  }
+
+  :global(.copy-btn) {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    background: transparent;
+    color: oklch(44.2% 0.017 285.786);
+    cursor: pointer;
+  }
+
+  :global(.copy-btn:hover) {
+    color: oklch(27.4% 0.006 286.033);
+  }
+
+  :global(.copy-btn .icon-check) {
+    color: #1a7f37;
+  }
+
+  .card {
+    font-family: var(--font-commit-mono), monospace;
+    font-size: 0.875rem;
+    background: white;
+    border: 1px solid oklch(92% 0.004 286.32);
+    padding: 1rem 1.5rem;
+  }
+
+  .card :global(p) {
+    margin-bottom: 1rem;
+  }
+
+  .card :global(ul),
+  .card :global(ol) {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+
+  .card :global(code) {
+    font-family: var(--font-commit-mono), monospace;
+    color: oklch(44.2% 0.017 285.786);
+    font-size: 0.9em;
+    background: oklch(92% 0.004 286.32);
+    padding: 0.15rem 0.3rem;
+  }
+
+  .card :global(pre code) {
+    background: none;
+    padding: 0;
+  }
+
+  .card :global(.frontmatter) {
+    color: oklch(44.2% 0.017 285.786);
+  }
+
+  .card :global(pre) {
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .card :global(pre code) {
+    background: none;
+    padding: 0;
+  }
+
+  .card :global(a) {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .card :global(blockquote) {
+    border-left: 3px solid currentColor;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+</style>

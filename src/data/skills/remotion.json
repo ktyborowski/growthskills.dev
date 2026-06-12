@@ -1,0 +1,14 @@
+{
+  "slug": "remotion",
+  "user": "remotion-dev",
+  "repo": "remotion",
+  "rawUrl": "https://raw.githubusercontent.com/remotion-dev/remotion/main/packages/skills/skills/remotion/SKILL.md",
+  "githubUrl": "https://github.com/remotion-dev/remotion/blob/main/packages/skills/skills/remotion/SKILL.md",
+  "name": "remotion",
+  "topics": [
+    "Motion Design",
+    "Design"
+  ],
+  "description": "Best practices for Remotion - Video creation in React.",
+  "featured": false
+}

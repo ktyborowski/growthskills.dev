@@ -1,0 +1,15 @@
+{
+  "slug": "ab-test-analysis",
+  "user": "phuryn",
+  "repo": "pm-skills",
+  "rawUrl": "https://raw.githubusercontent.com/phuryn/pm-skills/main/pm-data-analytics/skills/ab-test-analysis/SKILL.md",
+  "githubUrl": "https://github.com/phuryn/pm-skills/tree/main/pm-data-analytics/skills/ab-test-analysis",
+  "name": "ab-test-analysis",
+  "topics": [
+    "A/B Testing",
+    "Analytics",
+    "Metrics"
+  ],
+  "description": "Design and analyze A/B tests with statistical rigor, calculate sample sizes, and interpret results for data-driven decisions.",
+  "featured": true
+}

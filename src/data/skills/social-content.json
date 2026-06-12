@@ -1,0 +1,15 @@
+{
+  "slug": "social-content",
+  "user": "alirezarezvani",
+  "repo": "claude-skills",
+  "rawUrl": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/.gemini/skills/social-content/SKILL.md",
+  "githubUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/.gemini/skills/social-content",
+  "name": "social-content",
+  "topics": [
+    "Social Media",
+    "Content Marketing",
+    "Copywriting"
+  ],
+  "description": "Create, schedule, and optimize social media content for LinkedIn, Twitter/X, Instagram, and TikTok.",
+  "featured": false
+}

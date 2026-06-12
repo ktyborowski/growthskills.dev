@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const topics = await getCollection('topics');
+---
+
+<Layout title="Topics" description="Explore AI skills organized by topic. Find the right tools for automation, design, content creation, and more to power your growth engineering workflow.">
+  <h1>Topics</h1>
+  <p>Explore AI skills organized by topic. Find the right tools for automation, design, content creation, and more to power your growth engineering workflow.</p>
+  <div class="topics-grid">
+    {topics.map((topic) => (
+      <a href={`/topics/${topic.data.slug}`} class="topic-card">
+        <strong>{topic.data.label}</strong>
+        <p>{topic.data.description}</p>
+      </a>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .topics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .topic-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1px solid oklch(92% 0.004 286.32);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .topic-card:hover {
+    background: oklch(97% 0.004 286.32);
+  }
+
+  .topic-card strong {
+    font-size: 1.1rem;
+  }
+
+  .topic-card p {
+    opacity: 0.8;
+    margin: 0;
+  }
+</style>

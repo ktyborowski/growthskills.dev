@@ -1,0 +1,14 @@
+{
+  "slug": "data-analytics",
+  "user": "markdown-viewer",
+  "repo": "skills",
+  "rawUrl": "https://raw.githubusercontent.com/markdown-viewer/skills/main/data-analytics/SKILL.md",
+  "githubUrl": "https://github.com/markdown-viewer/skills/tree/main/data-analytics",
+  "name": "data-analytics",
+  "topics": [
+    "Analytics",
+    "Metrics"
+  ],
+  "description": "Create data pipeline and analytics architecture diagrams using PlantUML syntax with best practices.",
+  "featured": false
+}

@@ -1,0 +1,72 @@
+---
+import CopyButton from './CopyButton';
+
+interface Props {
+  repoUrl: string;
+  skillName: string;
+}
+
+const { repoUrl, skillName } = Astro.props;
+const copyText = `npx skills add ${repoUrl} --skill ${skillName}`;
+---
+
+<div class="install-cmd-wrapper">
+  <code class="install-cmd">
+    <span class="cmd">npx</span><span class="sub"> skills</span><span class="arg"> add</span><span class="url"> {repoUrl}</span><span class="arg"> --skill</span><span class="url"> {skillName}</span>
+  </code>
+  <CopyButton text={copyText} ariaLabel="Copy install command" client:load />
+</div>
+
+<style>
+  .install-cmd-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .install-cmd {
+    font-family: var(--font-commit-mono), monospace;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cmd {
+    color: #1a7f37;
+  }
+
+  .sub {
+    color: #116329;
+  }
+
+  .arg {
+    color: #1a7f37;
+  }
+
+  .url {
+    color: #0550ae;
+  }
+
+  :global(.copy-btn) {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    background: transparent;
+    color: oklch(44.2% 0.017 285.786);
+    cursor: pointer;
+  }
+
+  :global(.copy-btn:hover) {
+    color: oklch(27.4% 0.006 286.033);
+  }
+
+  :global(.copy-btn .icon-check) {
+    color: #1a7f37;
+  }
+</style>

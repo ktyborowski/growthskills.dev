@@ -1,0 +1,14 @@
+{
+  "slug": "text-to-lottie",
+  "user": "diffusionstudio",
+  "repo": "lottie",
+  "rawUrl": "https://raw.githubusercontent.com/diffusionstudio/lottie/main/skills/text-to-lottie/SKILL.md",
+  "githubUrl": "https://github.com/diffusionstudio/lottie/blob/main/skills/text-to-lottie/SKILL.md",
+  "name": "text-to-lottie",
+  "topics": [
+    "Motion Design",
+    "Design"
+  ],
+  "description": "Author Lottie (Bodymovin) JSON animations that render in a local skia player.",
+  "featured": true
+}

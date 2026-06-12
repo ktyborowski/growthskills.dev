@@ -1,0 +1,15 @@
+{
+  "slug": "landing-page-generator",
+  "user": "kostja94",
+  "repo": "marketing-skills",
+  "rawUrl": "https://raw.githubusercontent.com/kostja94/marketing-skills/main/skills/pages/marketing/landing-page/SKILL.md",
+  "githubUrl": "https://github.com/kostja94/marketing-skills/tree/main/skills/pages/marketing/landing-page",
+  "name": "landing-page-generator",
+  "topics": [
+    "Landing Pages",
+    "Design",
+    "Conversion Optimization"
+  ],
+  "description": "Generate complete landing pages with optimized layouts, copy, and conversion-focused design patterns.",
+  "featured": false
+}

@@ -1,17 +1,87 @@
 ---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
 
+const featuredSkills = await getCollection('skills', ({ data }) => {
+  return data.featured === true;
+});
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <pre class="hero">░▒█▀▀█░▒█▀▀▄░▒█▀▀▀█░▒█░░▒█░▀▀█▀▀░▒█░▒█░░░▒█▀▀▀█░▒█░▄▀░▀█▀░▒█░░░░▒█░░░░▒█▀▀▀█
+░▒█░▄▄░▒█▄▄▀░▒█░░▒█░▒█▒█▒█░░▒█░░░▒█▀▀█░░░░▀▀▀▄▄░▒█▀▄░░▒█░░▒█░░░░▒█░░░░░▀▀▀▄▄
+░▒█▄▄▀░▒█░▒█░▒█▄▄▄█░▒▀▄▀▄▀░░▒█░░░▒█░▒█░░░▒█▄▄▄█░▒█░▒█░▄█▄░▒█▄▄█░▒█▄▄█░▒█▄▄▄█</pre>
+  <p>A curated collection of AI skills for Growth Engineers.</p>
+  {featuredSkills.length > 0 && (
+    <>
+      <h2>Featured Skills</h2>
+      <div class="skills-grid">
+        {featuredSkills.map((skill) => (
+          <a href={`/skills/${skill.data.slug}`} class="skill-card">
+            <strong>{skill.data.slug}</strong>
+            <em>by {skill.data.user}</em>
+            <p>{skill.data.description}</p>
+          </a>
+        ))}
+      </div>
+    </>
+  )}
+  <p><a href="/skills">Browse all skills &rarr;</a></p>
+</Layout>
+
+<style>
+  .hero {
+    font-family: monospace;
+    font-size: 0.875rem;
+    line-height: 1;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      font-size: 0.4rem;
+    }
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1px solid oklch(92% 0.004 286.32);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .skill-card:hover {
+    background: oklch(97% 0.004 286.32);
+  }
+
+  .skill-card strong {
+    font-size: 1.1rem;
+  }
+
+  .skill-card p {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 640px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

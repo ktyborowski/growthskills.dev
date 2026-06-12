@@ -1,0 +1,15 @@
+{
+  "slug": "analytics-tracking",
+  "user": "kostja94",
+  "repo": "marketing-skills",
+  "rawUrl": "https://raw.githubusercontent.com/kostja94/marketing-skills/main/skills/analytics/tracking/SKILL.md",
+  "githubUrl": "https://github.com/kostja94/marketing-skills/tree/main/skills/analytics/tracking",
+  "name": "analytics-tracking",
+  "topics": [
+    "Analytics",
+    "Metrics",
+    "Marketing Automation"
+  ],
+  "description": "Implement analytics tracking, set up conversion events, and create measurement plans for marketing campaigns.",
+  "featured": true
+}

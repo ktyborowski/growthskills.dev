@@ -1,0 +1,15 @@
+{
+  "slug": "web-to-app-funnel",
+  "user": "eronred",
+  "repo": "aso-skills",
+  "rawUrl": "https://raw.githubusercontent.com/eronred/aso-skills/main/skills/web-to-app-funnel/SKILL.md",
+  "githubUrl": "https://github.com/eronred/aso-skills/tree/main/skills/web-to-app-funnel",
+  "name": "web-to-app-funnel",
+  "topics": [
+    "Funnels",
+    "Conversion Optimization",
+    "Product-Led Growth"
+  ],
+  "description": "Design and optimize the funnel that converts web visitors to app installs with deep linking and smart banners.",
+  "featured": false
+}

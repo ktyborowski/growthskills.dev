@@ -1,0 +1,15 @@
+{
+  "slug": "ua-campaign",
+  "user": "eronred",
+  "repo": "aso-skills",
+  "rawUrl": "https://raw.githubusercontent.com/eronred/aso-skills/main/skills/ua-campaign/SKILL.md",
+  "githubUrl": "https://github.com/eronred/aso-skills/tree/main/skills/ua-campaign",
+  "name": "ua-campaign",
+  "topics": [
+    "Paid Advertising",
+    "Growth Strategy",
+    "Analytics"
+  ],
+  "description": "Plan and optimize user acquisition campaigns across channels including paid ads, organic, and referral strategies.",
+  "featured": true
+}

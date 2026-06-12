@@ -1,0 +1,36 @@
+# Growth Skills
+
+A curated collection of AI skills for Growth Engineers.
+
+## Pages
+
+- [/](/) - Homepage
+- [/skills](/skills) - Browse all skills
+- [/categories](/categories) - Browse skills by category
+
+## Skills
+
+- [blog-writing-guide](/skills/blog-writing-guide) - Guide for writing, reviewing, and improving blog posts for engineering blogs and developer audiences. By getsentry.
+- [content-creation](/skills/content-creation) - Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies. By anthropics.
+- [frontend-design](/skills/frontend-design) - Guidelines for creating distinctive, production-grade frontend interfaces that avoid generic AI aesthetics. By anthropics.
+- [hyperframes](/skills/hyperframes) - Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. By heygen-com.
+- [motion-design](/skills/motion-design) - Motion design skill with 8-step checklist, motion personality archetypes, duration/easing tables, and quality checklists. By lottiefiles.
+- [remotion](/skills/remotion) - Best practices for Remotion - Video creation in React. By remotion-dev.
+- [text-to-lottie](/skills/text-to-lottie) - Author Lottie (Bodymovin) JSON animations that render in a local skia player. By diffusionstudio.
+
+## Categories
+
+- [animation](/categories/animation)
+- [content](/categories/content)
+- [design](/categories/design)
+- [frontend](/categories/frontend)
+- [marketing](/categories/marketing)
+- [video](/categories/video)
+
+## Install Skills
+
+Each skill can be installed via:
+
+```
+npx skills add https://github.com/{user}/{repo} --skill {skill-name}
+```

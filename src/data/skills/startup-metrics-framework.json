@@ -1,0 +1,15 @@
+{
+  "slug": "startup-metrics-framework",
+  "user": "wshobson",
+  "repo": "agents",
+  "rawUrl": "https://raw.githubusercontent.com/wshobson/agents/main/plugins/startup-business-analyst/skills/startup-metrics-framework/SKILL.md",
+  "githubUrl": "https://github.com/wshobson/agents/tree/main/plugins/startup-business-analyst/skills/startup-metrics-framework",
+  "name": "startup-metrics-framework",
+  "topics": [
+    "Metrics",
+    "Analytics",
+    "Growth Strategy"
+  ],
+  "description": "Track, calculate, and optimize key performance metrics for SaaS, marketplace, and consumer apps.",
+  "featured": false
+}

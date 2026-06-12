@@ -1,0 +1,15 @@
+{
+  "slug": "seo",
+  "user": "addyosmani",
+  "repo": "web-quality-skills",
+  "rawUrl": "https://raw.githubusercontent.com/addyosmani/web-quality-skills/main/skills/seo/SKILL.md",
+  "githubUrl": "https://github.com/addyosmani/web-quality-skills/tree/main/skills/seo",
+  "name": "seo",
+  "topics": [
+    "SEO",
+    "Analytics",
+    "Content Marketing"
+  ],
+  "description": "Optimize for search engine visibility and ranking with technical SEO, on-page optimization, and structured data.",
+  "featured": false
+}

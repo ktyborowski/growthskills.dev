@@ -1,0 +1,15 @@
+{
+  "slug": "content-strategy",
+  "user": "anthropics",
+  "repo": "knowledge-work-plugins",
+  "rawUrl": "https://raw.githubusercontent.com/anthropics/knowledge-work-plugins/main/small-business/skills/content-strategy/SKILL.md",
+  "githubUrl": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/content-strategy",
+  "name": "content-strategy",
+  "topics": [
+    "Content Marketing",
+    "Growth Strategy",
+    "Analytics"
+  ],
+  "description": "Analyze sales data to find top performers and slow movers, layer in seasonality, and produce a prioritized 30-day content brief.",
+  "featured": false
+}
