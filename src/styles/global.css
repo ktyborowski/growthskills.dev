@@ -78,6 +78,13 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.github-button {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
 ul {
   list-style: none;
 }
